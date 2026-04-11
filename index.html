@@ -17,6 +17,12 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '923204823678831');
   fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {
+    content_name: '30 Dias Caminhando com Maria',
+    content_type: 'product',
+    value: 19.90,
+    currency: 'BRL'
+  });
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=923204823678831&ev=PageView&noscript=1"
@@ -1127,7 +1133,11 @@
     // Meta Pixel — InitiateCheckout nos CTAs
     document.querySelectorAll('.cta-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        fbq('track', 'InitiateCheckout', {currency: 'BRL', value: 19.90});
+        fbq('track', 'InitiateCheckout', {
+          content_name: '30 Dias Caminhando com Maria',
+          currency: 'BRL',
+          value: 19.90
+        });
       });
     });
   </script>
